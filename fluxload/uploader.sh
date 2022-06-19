@@ -6,7 +6,7 @@ for i in /srv/data/na-en/*.gz
 		ts=`echo $i | tr "/" " " | tr "." " "| awk ' { print $4 }'`
 		cat tmp.csv | egrep -v '^,' > tmp2.csv
 		influx write -b bdo -f ./header.csv -f ./tmp2.csv \
-			--header "#constant dateTime,${ts}000000000" -o DK --host http://10.132.10.108:8086 \
+			--header "#constant dateTime,${ts}000000000" -o DK --host $INFLUX_HOST \
 			--token $INFLUX_TOKEN
 		rm tmp.csv
 		mv $i /srv/data/na-en/done/
