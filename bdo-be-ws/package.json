@@ -2,7 +2,9 @@
   "dependencies": {
     "@hapi/hapi": "^20.2.2",
     "@hapi/teamwork": "^6.0.0",
-    "hapi-router": "^5.1.0"
+    "hapi-postgres-connection": "^7.0.0",
+    "hapi-router": "^5.1.0",
+    "pg": "^8.7.3"
   },
   "name": "bdo-be-ws",
   "version": "1.0.0",
