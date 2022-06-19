@@ -1,6 +1,6 @@
-create table items
+create table recipes
 	(
-	item_id int not null primary key,
+	recipe_id int not null primary key,
 	en varchar(200)	
 	);
 
